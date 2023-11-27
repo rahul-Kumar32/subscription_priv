@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:subscription_management/Screens/takePermissions.dart';
 
 void main() {
   runApp(const MyApp());
@@ -98,37 +99,50 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Padding(padding: EdgeInsets.only(top: 769.h,left: 100.w),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.yellow,
-                  borderRadius: BorderRadius.circular(30.0.w),
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
                 ),
-                width: 272.w,
-                height: 56.h,
-                child:  Center(
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Spacer(),
-                      Text(
-                        'Explore the future',
-                        style: TextStyle(
-                          fontSize: 16.sp,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                      SizedBox(width: 8.0.w,),
-                      for (int i = 0; i < 3; i++)
-                        Opacity(
-                          opacity: (i + 1) / 3,
-                          child: Icon(Icons.navigate_next),
-                        ),
-                      SizedBox(width: 20.0.w,),
-
-                    ],
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => TakePermissions(title: 'title')),);
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.yellow,
+                    borderRadius: BorderRadius.circular(30.0.w),
                   ),
-                ),
+                  width: 272.w,
+                  height: 56.h,
+                  child:  Center(
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Spacer(),
+                        Text(
+                          'Explore the future',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16.sp,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                        SizedBox(width: 8.0.w,),
+                        for (int i = 0; i < 3; i++)
+                          Opacity(
+                            opacity: (i + 1) / 3,
+                            child: Icon(Icons.navigate_next,
+                            color: Colors.black,),
+                          ),
+                        SizedBox(width: 20.0.w,),
 
+                      ],
+                    ),
+                  ),
+
+                ),
               ),
             )
           ],
@@ -149,3 +163,23 @@ Widget TextShow(String s) {
   );
 }
 
+
+
+
+//
+// return Scaffold(
+// body: Container(
+// decoration: BoxDecoration(
+// image: DecorationImage(
+// image: AssetImage("assets/images/bulb.jpg"),
+// fit: BoxFit.cover,
+// ),
+// ),
+// child: Column(
+// mainAxisAlignment: MainAxisAlignment.start,
+// children: [
+// // Add other widgets here
+// ],
+// ),
+// ),
+// );
