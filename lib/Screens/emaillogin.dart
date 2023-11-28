@@ -18,6 +18,8 @@ class _MyHomePageState extends State<EmailLogin> {
       // resizeToAvoidBottomInset: false,
       body:  Stack(
         children: [
+
+
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
@@ -71,8 +73,10 @@ class _MyHomePageState extends State<EmailLogin> {
                               fontFamily: 'Inter',
                               fontWeight: FontWeight.w700,
                               // height: 0.04,
-                              letterSpacing: -0.32,
+                              // letterSpacing: -0.32,
+
                             ),
+                            maxLines: 2,
                           ),
                         ),
                       ),
@@ -94,6 +98,7 @@ class _MyHomePageState extends State<EmailLogin> {
                             fontWeight: FontWeight.w400,
                             // height: 0.07,
                           ),
+                          maxLines: 2,
                         ),
                       ),
                       Spacer(),
@@ -103,7 +108,26 @@ class _MyHomePageState extends State<EmailLogin> {
               ),
             ),
 
-          )
+          ),
+          Padding(
+              padding: EdgeInsets.only(top: 44.0.h, left: 4.0.w,right: 19.0.w),
+              child: Row(
+                children: [
+                  Container(
+                    // color: Colors.white30,
+                    width: 48.w,
+                    height: 48.h,
+                    child: IconButton(
+                      icon: Icon(Icons.arrow_back,
+                        color: Colors.white,),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                    ),
+                  ),
+                ],
+              )
+          ),
 
         ],
       ),
