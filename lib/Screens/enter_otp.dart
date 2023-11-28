@@ -99,38 +99,35 @@ class _OtpPageState extends State<OtpPage> {
           ),
           Padding(
             padding: EdgeInsets.only(top: 180.h, left: 22.w),
-            child: Container(
-              width: 190.w,
-              height: 54.h,
-              child: const Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'enter the OTP sent to',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontFamily: 'Inria Serif',
-                      fontWeight: FontWeight.w400,
-                      height: 0.07,
-                      letterSpacing: -0.20,
-                    ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(height: 10,),
+                Text(
+                  'Enter the OTP sent to',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontFamily: 'Inria Serif',
+                    fontWeight: FontWeight.w400,
+                    height: 0.07,
+                    // letterSpacing: -0.20,
                   ),
-                  Spacer(),
-                  Text(
-                    '9861 975 966',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontFamily: 'Inria Serif',
-                      fontWeight: FontWeight.w400,
-                      height: 0.07,
-                      letterSpacing: -0.20,
-                    ),
+                ),
+                SizedBox(height: 20,),
+                Text(
+                  '9861 975 966',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontFamily: 'Inria Serif',
+                    fontWeight: FontWeight.w400,
+                    height: 0.07,
+                    letterSpacing: -0.20,
                   ),
-                  Spacer(),
-                ],
-              ),
+                ),
+                Spacer(),
+              ],
             ),
           ),
           Padding(
@@ -210,18 +207,14 @@ class _OtpPageState extends State<OtpPage> {
                           ),
                         ),
                         SizedBox(width: 2,),
-                        Container(
-                          width: 53.w,
-                          height: 20.h,
-                          child: Text(
-                            'Resend',
-                            style: TextStyle(
-                              color: Color(0xFF005EFE),
-                              fontSize: 16,
-                              fontFamily: 'Inria Sans',
-                              fontWeight: FontWeight.w700,
-                              height: 0.08,
-                            ),
+                        Text(
+                          'Resend',
+                          style: TextStyle(
+                            color: Color(0xFF005EFE),
+                            fontSize: 16,
+                            fontFamily: 'Inria Sans',
+                            fontWeight: FontWeight.w700,
+                            height: 0.08,
                           ),
                         )
                       ],

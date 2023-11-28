@@ -5,6 +5,7 @@ import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:subscription_management/Screens/emaillogin.dart';
 
 import 'enter_otp.dart';
+import 'mobileNumberVerify.dart';
 
 
 class EmailEnter extends StatefulWidget {
@@ -22,49 +23,6 @@ class _MyHomePageState extends State<EmailEnter> {
       backgroundColor: Colors.white,
         body:  Stack(
           children: [
-            Positioned(
-              left: 20.w,
-              right: 20.w,
-              bottom: 20.h,
-              child: InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) =>  OtpPage()),);
-                },
-                child: Container(
-                  width: 353,
-                  height: 56,
-                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 17),
-                  decoration: ShapeDecoration(
-                    color: Colors.grey.shade300,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(50),
-                    ),
-                  ),
-                  child: Center(
-                    child: Row(
-                      children: [
-                        Spacer(),
-                        const Text(
-                          'Continue',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 16,
-                            fontFamily: 'Inria Sans',
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
-
-                        Spacer(),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -96,6 +54,48 @@ class _MyHomePageState extends State<EmailEnter> {
                 RoundedEmailTextField(),
               ],
             ),
+            Positioned(
+              left: 20.w,
+              right: 20.w,
+              bottom: 24.h,
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>  MobileNumberScreen()),);
+                },
+                child: Container(
+                  width: 353.w,
+                  height: 56.h,
+                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 17),
+                  decoration: ShapeDecoration(
+                    color: Colors.grey.shade300,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                  ),
+                  child: Center(
+                    child: Row(
+                      children: [
+                        Spacer(),
+                        const Text(
+                          'Continue',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            fontFamily: 'Inria Sans',
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                        Spacer(),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
 
           ],
         )
@@ -106,7 +106,7 @@ class CustomBackButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(8.0),
+      padding: EdgeInsets.only(left:8.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10.0),
         // border: Border.all(

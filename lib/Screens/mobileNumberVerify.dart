@@ -6,6 +6,7 @@ import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:subscription_management/Screens/emailEenter.dart';
 
 import 'emaillogin.dart';
+import 'enter_otp.dart';
 
 
 class MobileNumberScreen extends StatefulWidget {
@@ -53,39 +54,36 @@ class _MyHomePageState extends State<MobileNumberScreen> {
                   ),
                 )
             ),
-
             Padding(
               padding: EdgeInsets.only(top: 180.h, left: 22.w),
-              child: Container(
-                width: 139.w,
-                height: 54.h,
-                child: const Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'tell us your',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontFamily: 'Inria Serif',
-                        fontWeight: FontWeight.w400,
-                        // height: 0.07,
-                        letterSpacing: -0.20,
-                      ),
+              child: const Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'tell us your',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontFamily: 'Inria Serif',
+                      fontWeight: FontWeight.w400,
+                      // height: 0.07,
+                      letterSpacing: -0.20,
                     ),
-                    Text(
-                      'mobile number',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontFamily: 'Inria Serif',
-                        fontWeight: FontWeight.w400,
-                        // height: 0.07,
-                        letterSpacing: -0.20,
-                      ),
+                  ),
+                  Text(
+                    'mobile number',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontFamily: 'Inria Serif',
+                      fontWeight: FontWeight.w400,
+                      // height: 0.07,
+                      // letterSpacing: -0.20,
                     ),
-                  ],
-                ),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ],
               ),
             ),
             Padding(
@@ -175,7 +173,7 @@ class _MyHomePageState extends State<MobileNumberScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) =>  EmailEnter()),);
+                        builder: (context) =>  OtpPage()),);
                 },
                 child: Container(
                   width: 353,

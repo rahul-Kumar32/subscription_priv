@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:subscription_management/Screens/takePermissions.dart';
 
+import 'Screens/emailEenter.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -107,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => TakePermissions(title: 'title')),);
+                        builder: (context) => EmailEnter()),);
                 },
                 child: Container(
                   decoration: BoxDecoration(
@@ -120,6 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
+                        SizedBox(width: 10.w,),
                         Spacer(),
                         Text(
                           'Explore the future',
@@ -136,8 +139,8 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: Icon(Icons.navigate_next,
                             color: Colors.black,),
                           ),
-                        SizedBox(width: 20.0.w,),
-
+                        // SizedBox(width: 20.0.w,),
+                        Spacer(),
                       ],
                     ),
                   ),
@@ -158,28 +161,7 @@ Widget TextShow(String s) {
       fontWeight: FontWeight.w700,
       fontSize: 40.sp,
       color: Colors.white,
-      // fontFamily: 'Inria Serif',
+      fontFamily: 'Inria Serif',
     ),
   );
 }
-
-
-
-
-//
-// return Scaffold(
-// body: Container(
-// decoration: BoxDecoration(
-// image: DecorationImage(
-// image: AssetImage("assets/images/bulb.jpg"),
-// fit: BoxFit.cover,
-// ),
-// ),
-// child: Column(
-// mainAxisAlignment: MainAxisAlignment.start,
-// children: [
-// // Add other widgets here
-// ],
-// ),
-// ),
-// );
